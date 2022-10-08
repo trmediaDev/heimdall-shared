@@ -7,8 +7,9 @@ export enum ServerCapability {
 
 export class ServerCapabilityStatus {
     /**
-     * API or Stargate server may periodically calls this endpoint to update the status for capability.
+     * API (or any other server except Stargate) server may periodically calls this endpoint to update the status for capability.
      * This allow us to only direct users to online servers.
+     * 
      */
     statusCheckEndpoint: string;
     status?: boolean;
@@ -34,10 +35,17 @@ export class ServerStatus {
     api?: ServerCapabilityStatus;
 }
 
+export class SystemInfo {
+    freeSpace: number;
+    totalSpace: number;
+}
+
 export class Server {
     ipAddress: string;
     domain: string;
+    ncfDomain: string;
     aliases: string[];
+    systemInfo: SystemInfo;
     capabilities: ServerCapability[];
     status: ServerStatus
     enabled: boolean;
