@@ -51,6 +51,10 @@ export class Asset {
     @IsEnum(AssetType)
     type: AssetType;
 
+    /**
+     * This is used as the file name when storing the file on GCP
+     * or on local disk. filename consist of mongo oid + extension
+     */
     @IsString()
     filename: string;
 
