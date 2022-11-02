@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
+exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetPostRequest = exports.AssetFindRequest = void 0;
 const bson_1 = require("bson");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
@@ -35,14 +35,29 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetFindRequest.prototype, "categorySubcategories", void 0);
 exports.AssetFindRequest = AssetFindRequest;
+class AssetPostRequest {
+}
+__decorate([
+    (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
+], AssetPostRequest.prototype, "type", void 0);
+__decorate([
+    (0, class_validator_1.IsString)()
+], AssetPostRequest.prototype, "readableFilename", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], AssetPostRequest.prototype, "description", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.ValidateNested)(),
+    (0, class_validator_1.IsOptional)()
+], AssetPostRequest.prototype, "categorySubcategories", void 0);
+exports.AssetPostRequest = AssetPostRequest;
 class AssetPatchRequest {
 }
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
 ], AssetPatchRequest.prototype, "type", void 0);
-__decorate([
-    (0, class_validator_1.IsString)()
-], AssetPatchRequest.prototype, "filename", void 0);
 __decorate([
     (0, class_validator_1.IsString)()
 ], AssetPatchRequest.prototype, "readableFilename", void 0);

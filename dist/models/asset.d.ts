@@ -8,15 +8,24 @@ export declare class AssetFindRequest {
     description?: string;
     categorySubcategories?: CategorySubcategory[];
 }
+export declare class AssetPostRequest {
+    type: AssetType;
+    readableFilename: string;
+    description?: string;
+    categorySubcategories?: CategorySubcategory[];
+}
 export declare class AssetPatchRequest {
     type: AssetType;
-    filename: string;
     readableFilename: string;
     description?: string;
     categorySubcategories?: CategorySubcategory[];
 }
 export declare class Asset {
     type: AssetType;
+    /**
+     * This is used as the file name when storing the file on GCP
+     * or on local disk. filename consist of mongo oid + extension
+     */
     filename: string;
     readableFilename: string;
     description?: string;

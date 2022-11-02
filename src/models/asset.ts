@@ -27,12 +27,26 @@ export class AssetFindRequest {
     categorySubcategories?: CategorySubcategory[];
 }
 
-export class AssetPatchRequest {
+export class AssetPostRequest {
     @IsEnum(AssetType)
     type: AssetType;
 
     @IsString()
-    filename: string;
+    readableFilename: string;
+
+    @IsString()
+    @IsOptional()
+    description?: string;
+
+    @IsArray()
+    @ValidateNested()
+    @IsOptional()
+    categorySubcategories?: CategorySubcategory[];
+}
+
+export class AssetPatchRequest {
+    @IsEnum(AssetType)
+    type: AssetType;
 
     @IsString()
     readableFilename: string;
