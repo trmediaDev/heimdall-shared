@@ -2,20 +2,20 @@ import { ObjectId } from 'bson';
 
 export enum ServerCapability {
     STORAGE = 'storage',
-    API = 'api'
+    API = 'api',
 }
 
 export class ServerCapabilityStatus {
     /**
      * API (or any other server except Stargate) server may periodically calls this endpoint to update the status for capability.
      * This allow us to only direct users to online servers.
-     * 
+     *
      */
     statusCheckEndpoint: string;
     status?: boolean;
     lastUpdatedDate?: Date;
     /**
-     * If multiple servers matches a certain criteria and resolving doesn't use other criteria 
+     * If multiple servers matches a certain criteria and resolving doesn't use other criteria
      * (including random selection) for selecting a server, this property will be used to break the ties.
      */
     preferred: boolean;
@@ -47,7 +47,7 @@ export class Server {
     aliases: string[];
     systemInfo: SystemInfo;
     capabilities: ServerCapability[];
-    status: ServerStatus
+    status: ServerStatus;
     enabled: boolean;
 }
 

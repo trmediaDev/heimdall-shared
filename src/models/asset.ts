@@ -1,6 +1,7 @@
 import { ObjectId } from 'bson';
 import { Type } from 'class-transformer';
 import { IsArray, IsBoolean, IsEnum, IsOptional, IsString, ValidateNested } from 'class-validator';
+
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 
