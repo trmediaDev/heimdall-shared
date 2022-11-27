@@ -49,17 +49,18 @@ __decorate([
 ], AssetPostRequest.prototype, "description", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.ValidateNested)(),
     (0, class_validator_1.IsOptional)()
-], AssetPostRequest.prototype, "categorySubcategories", void 0);
+], AssetPostRequest.prototype, "keywords", void 0);
 exports.AssetPostRequest = AssetPostRequest;
 class AssetPatchRequest {
 }
 __decorate([
-    (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
+    (0, class_validator_1.IsEnum)(asset_type_1.AssetType),
+    (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "type", void 0);
 __decorate([
-    (0, class_validator_1.IsString)()
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "readableFilename", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
@@ -67,9 +68,8 @@ __decorate([
 ], AssetPatchRequest.prototype, "description", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.ValidateNested)(),
     (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "categorySubcategories", void 0);
+], AssetPatchRequest.prototype, "keywords", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
 class Asset {
 }
@@ -87,10 +87,8 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "description", void 0);
 __decorate([
-    (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.ValidateNested)(),
-    (0, class_validator_1.IsOptional)()
-], Asset.prototype, "categorySubcategories", void 0);
+    (0, class_validator_1.IsArray)()
+], Asset.prototype, "keywords", void 0);
 __decorate([
     (0, class_transformer_1.Type)(() => bson_1.ObjectId),
     (0, class_validator_1.IsOptional)()
@@ -103,6 +101,12 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "disabled", void 0);
+__decorate([
+    (0, class_transformer_1.Type)(() => Date)
+], Asset.prototype, "createdDate", void 0);
+__decorate([
+    (0, class_transformer_1.Type)(() => Date)
+], Asset.prototype, "updatedDate", void 0);
 exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
