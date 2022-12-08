@@ -24,16 +24,13 @@ var SecurityUtils;
             if (!salt) {
                 salt = yield getSalt();
             }
-            var hash = yield bcrypt.hashSync(password, salt);
-            ;
-            return hash;
+            return yield bcrypt.hashSync(password, salt);
         });
     }
     SecurityUtils.hashPassword = hashPassword;
     function compare(hashedPassword, doubleHashedPassword) {
         return __awaiter(this, void 0, void 0, function* () {
-            var isEqual = yield bcrypt.compare(hashedPassword, doubleHashedPassword);
-            return isEqual;
+            return yield bcrypt.compare(hashedPassword, doubleHashedPassword);
         });
     }
     SecurityUtils.compare = compare;

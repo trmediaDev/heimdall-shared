@@ -6,7 +6,6 @@ var StringUtils;
 (function (StringUtils) {
     function random() {
         return crypto.randomBytes(20).toString('hex');
-        ;
     }
     StringUtils.random = random;
 })(StringUtils = exports.StringUtils || (exports.StringUtils = {}));

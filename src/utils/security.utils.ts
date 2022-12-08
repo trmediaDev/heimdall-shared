@@ -9,12 +9,10 @@ export namespace SecurityUtils {
         if (!salt) {
             salt = await getSalt();
         }
-        var hash = await bcrypt.hashSync(password, salt);;
-        return hash;
+        return await bcrypt.hashSync(password, salt);
     }
 
     export async function compare(hashedPassword: string, doubleHashedPassword: string) {
-        var isEqual = await bcrypt.compare(hashedPassword, doubleHashedPassword);
-        return isEqual;
+        return await bcrypt.compare(hashedPassword, doubleHashedPassword);
     }
 }
