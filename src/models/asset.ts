@@ -28,7 +28,7 @@ export class AssetFindRequest {
     categorySubcategories?: CategorySubcategory[];
 }
 
-export class AssetPostRequest {
+export declare class AssetPostRequest {
     @IsEnum(AssetType)
     type: AssetType;
 
