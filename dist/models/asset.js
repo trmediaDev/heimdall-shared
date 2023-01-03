@@ -55,6 +55,10 @@ __decorate([
 ], AssetPatchRequest.prototype, "keywords", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
 class Asset {
+    constructor() {
+        this.repetable = false;
+        this.disabled = false;
+    }
 }
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
@@ -80,6 +84,18 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "cachedFilepath", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "cachedThumbnailpath", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "thumbnailName", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "repetable", void 0);
 __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()

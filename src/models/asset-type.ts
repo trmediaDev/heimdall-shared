@@ -1,5 +1,7 @@
 export enum AssetType {
     TEMPLATE = 'template',
-    SVG = 'svg',
-    IMAGE = 'image',
+    STICKER = 'sticker',
+    BACKGROUND = 'background',
+    DECORATION_ITEM = 'decorations_item',
+    SHAPE = 'shape',
 }

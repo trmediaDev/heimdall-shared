@@ -92,9 +92,21 @@ export class Asset {
     @IsOptional()
     cachedFilepath?: string;
 
+    @IsString()
+    @IsOptional()
+    cachedThumbnailpath?: string;
+
+    @IsString()
+    @IsOptional()
+    thumbnailName?: string;
+
     @IsBoolean()
     @IsOptional()
-    disabled?: boolean;
+    repetable?: boolean =false;
+
+    @IsBoolean()
+    @IsOptional()
+    disabled?: boolean=false;
 
     @Type(() => Date)
     createdDate: Date;
