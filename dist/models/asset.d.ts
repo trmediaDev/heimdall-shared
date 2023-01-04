@@ -12,6 +12,7 @@ export declare class AssetPostRequest {
     type: AssetType;
     readableFilename: string;
     description?: string;
+    repetable?: boolean;
     keywords?: [];
 }
 export declare class AssetPatchRequest {

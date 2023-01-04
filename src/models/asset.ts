@@ -39,6 +39,10 @@ export declare class AssetPostRequest {
     @IsOptional()
     description?: string;
 
+    @IsBoolean()
+    @IsOptional()
+    repetable?: boolean;
+
     @IsArray()
     @IsOptional()
     keywords?: [];
