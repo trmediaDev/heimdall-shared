@@ -1,7 +1,7 @@
 import { ObjectId } from 'bson';
 import { Type } from 'class-transformer';
 import { IsArray, IsBoolean, IsEnum, IsOptional, IsString, ValidateNested } from 'class-validator';
-
+import { Document } from 'mongodb';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 
@@ -42,6 +42,9 @@ export declare class AssetPostRequest {
     @IsBoolean()
     @IsOptional()
     repetable?: boolean;
+    @IsBoolean()
+    @IsOptional()
+    showInPublicSearch?: boolean;
 
     @IsArray()
     @IsOptional()
@@ -61,12 +64,16 @@ export class AssetPatchRequest {
     @IsOptional()
     description?: string;
 
+    @IsBoolean()
+    @IsOptional()
+    showInPublicSearch?: boolean;
+
     @IsArray()
     @IsOptional()
     keywords?: [];
 }
 
-export class Asset {
+export class Asset{
     @IsEnum(AssetType)
     type: AssetType;
 
@@ -106,11 +113,15 @@ export class Asset {
 
     @IsBoolean()
     @IsOptional()
-    repetable?: boolean =false;
+    repetable?: boolean;
 
     @IsBoolean()
     @IsOptional()
-    disabled?: boolean=false;
+    disabled?: boolean;
+
+    @IsBoolean()
+    @IsOptional()
+    showInPublicSearch?: boolean;
 
     @Type(() => Date)
     createdDate: Date;

@@ -13,12 +13,14 @@ export declare class AssetPostRequest {
     readableFilename: string;
     description?: string;
     repetable?: boolean;
+    showInPublicSearch?: boolean;
     keywords?: [];
 }
 export declare class AssetPatchRequest {
     type?: AssetType;
     readableFilename?: string;
     description?: string;
+    showInPublicSearch?: boolean;
     keywords?: [];
 }
 export declare class Asset {
@@ -38,6 +40,7 @@ export declare class Asset {
     thumbnailName?: string;
     repetable?: boolean;
     disabled?: boolean;
+    showInPublicSearch?: boolean;
     createdDate: Date;
     updatedDate: Date;
 }

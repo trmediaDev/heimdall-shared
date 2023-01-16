@@ -14,10 +14,10 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./models/categorysubcategory"), exports);
-__exportStar(require("./models/server"), exports);
 __exportStar(require("./models/asset"), exports);
 __exportStar(require("./models/asset-type"), exports);
+__exportStar(require("./models/categorysubcategory"), exports);
+__exportStar(require("./models/server"), exports);
 __exportStar(require("./responses/insert-response"), exports);
 __exportStar(require("./responses/update-response"), exports);
 __exportStar(require("./utils/mongo.utils"), exports);

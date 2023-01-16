@@ -50,15 +50,15 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "description", void 0);
 __decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], AssetPatchRequest.prototype, "showInPublicSearch", void 0);
+__decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "keywords", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
 class Asset {
-    constructor() {
-        this.repetable = false;
-        this.disabled = false;
-    }
 }
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
@@ -100,6 +100,10 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "disabled", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "showInPublicSearch", void 0);
 __decorate([
     (0, class_transformer_1.Type)(() => Date)
 ], Asset.prototype, "createdDate", void 0);
