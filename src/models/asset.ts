@@ -91,6 +91,10 @@ export class Asset{
     @IsOptional()
     description?: string;
 
+    @IsString()
+    @IsOptional()
+    mimeType?: string;
+
     @IsArray()
     keywords: string[];
 
@@ -122,6 +126,21 @@ export class Asset{
     @IsBoolean()
     @IsOptional()
     showInPublicSearch?: boolean;
+
+    @IsBoolean()
+    @IsOptional()
+    uploadedForTemplateId?: ObjectId;
+    @IsBoolean()
+    @IsOptional()
+    usedByTemplateIds?: ObjectId[];
+
+    @IsBoolean()
+    @IsOptional()
+    uploadedBy?: ObjectId;
+
+    @IsBoolean()
+    @IsOptional()
+    modifiedBy?: ObjectId;
 
     @Type(() => Date)
     createdDate: Date;
