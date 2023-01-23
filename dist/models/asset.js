@@ -74,6 +74,10 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "description", void 0);
 __decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "mimeType", void 0);
+__decorate([
     (0, class_validator_1.IsArray)()
 ], Asset.prototype, "keywords", void 0);
 __decorate([
@@ -104,6 +108,22 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "showInPublicSearch", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "uploadedForTemplateId", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "usedByTemplateIds", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "uploadedBy", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "modifiedBy", void 0);
 __decorate([
     (0, class_transformer_1.Type)(() => Date)
 ], Asset.prototype, "createdDate", void 0);
