@@ -19,6 +19,7 @@ export declare class AssetPostRequest {
 }
 export declare class AssetPatchRequest {
     type?: AssetType;
+    mimeType?: string;
     readableFilename?: string;
     description?: string;
     showInPublicSearch?: boolean;

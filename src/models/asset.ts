@@ -61,6 +61,11 @@ export class AssetPatchRequest {
 
     @IsString()
     @IsOptional()
+    mimeType?: string;
+
+
+    @IsString()
+    @IsOptional()
     readableFilename?: string;
 
     @IsString()

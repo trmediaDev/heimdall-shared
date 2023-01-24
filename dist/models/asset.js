@@ -44,6 +44,10 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
+], AssetPatchRequest.prototype, "mimeType", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "readableFilename", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
