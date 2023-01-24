@@ -12,6 +12,7 @@ export declare class AssetPostRequest {
     type: AssetType;
     readableFilename: string;
     description?: string;
+    mimeType?: string;
     repetable?: boolean;
     showInPublicSearch?: boolean;
     keywords?: [];
