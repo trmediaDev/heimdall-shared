@@ -38,6 +38,9 @@ export declare class AssetPostRequest {
     @IsString()
     @IsOptional()
     description?: string;
+    @IsString()
+    @IsOptional()
+    mimeType?: string;
 
     @IsBoolean()
     @IsOptional()
