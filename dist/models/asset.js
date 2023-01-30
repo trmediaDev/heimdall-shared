@@ -107,6 +107,10 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
+], Asset.prototype, "archived", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "disabled", void 0);
 __decorate([
     (0, class_validator_1.IsBoolean)(),

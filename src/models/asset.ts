@@ -129,6 +129,10 @@ export class Asset{
 
     @IsBoolean()
     @IsOptional()
+    archived?: boolean;
+
+    @IsBoolean()
+    @IsOptional()
     disabled?: boolean;
 
     @IsBoolean()
@@ -155,6 +159,7 @@ export class Asset{
 
     @Type(() => Date)
     updatedDate: Date;
+    
 }
 
 export class AssetDBObject extends Asset {

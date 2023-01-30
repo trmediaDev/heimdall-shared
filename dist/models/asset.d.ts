@@ -42,6 +42,7 @@ export declare class Asset {
     cachedThumbnailpath?: string;
     thumbnailName?: string;
     repetable?: boolean;
+    archived?: boolean;
     disabled?: boolean;
     showInPublicSearch?: boolean;
     uploadedForTemplateId?: ObjectId;
