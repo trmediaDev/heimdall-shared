@@ -28,6 +28,10 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
+], AssetFindRequest.prototype, "originalFilename", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
 ], AssetFindRequest.prototype, "description", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
@@ -58,10 +62,19 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "showInPublicSearch", void 0);
 __decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], AssetPatchRequest.prototype, "originalFilename", void 0);
+__decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "keywords", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
+// 
+//************* */
+//Asset Model
+//************** */
+//
 class Asset {
 }
 __decorate([
@@ -73,6 +86,10 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)()
 ], Asset.prototype, "readableFilename", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "originalFilename", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()

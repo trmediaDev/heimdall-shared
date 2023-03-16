@@ -5,6 +5,7 @@ export declare class AssetFindRequest {
     type?: AssetType;
     filename?: string | RegExp;
     readableFilename?: string;
+    originalFilename?: string;
     description?: string;
     categorySubcategories?: CategorySubcategory[];
 }
@@ -16,6 +17,7 @@ export declare class AssetPostRequest {
     repetable?: boolean;
     showInPublicSearch?: boolean;
     keywords?: [];
+    originalFilename?: string;
 }
 export declare class AssetPatchRequest {
     type?: AssetType;
@@ -23,6 +25,7 @@ export declare class AssetPatchRequest {
     readableFilename?: string;
     description?: string;
     showInPublicSearch?: boolean;
+    originalFilename?: string;
     keywords?: [];
 }
 export declare class Asset {
@@ -33,6 +36,7 @@ export declare class Asset {
      */
     filename: string;
     readableFilename: string;
+    originalFilename?: string;
     description?: string;
     mimeType?: string;
     keywords: string[];

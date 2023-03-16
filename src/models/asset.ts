@@ -20,6 +20,10 @@ export class AssetFindRequest {
 
     @IsString()
     @IsOptional()
+    originalFilename?: string;
+
+    @IsString()
+    @IsOptional()
     description?: string;
 
     @IsArray()
@@ -34,6 +38,7 @@ export declare class AssetPostRequest {
 
     @IsString()
     readableFilename: string;
+    
 
     @IsString()
     @IsOptional()
@@ -52,6 +57,11 @@ export declare class AssetPostRequest {
     @IsArray()
     @IsOptional()
     keywords?: [];
+
+    @IsString()
+    @IsOptional()
+    originalFilename?: string;
+
 }
 
 export class AssetPatchRequest {
@@ -76,10 +86,22 @@ export class AssetPatchRequest {
     @IsOptional()
     showInPublicSearch?: boolean;
 
+    @IsString()
+    @IsOptional()
+    originalFilename?: string;
+
+
     @IsArray()
     @IsOptional()
     keywords?: [];
 }
+
+
+// 
+//************* */
+//Asset Model
+//************** */
+//
 
 export class Asset{
     @IsEnum(AssetType)
@@ -94,6 +116,11 @@ export class Asset{
 
     @IsString()
     readableFilename: string;
+
+    @IsString()
+    @IsOptional()
+    originalFilename?: string;
+
 
     @IsString()
     @IsOptional()
