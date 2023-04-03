@@ -1,6 +1,7 @@
 import { Task } from './task';
 import { ObjectId } from 'bson';
 import { WorkflowAsset } from './workflow-asset';
+import { WorkflowType } from './workflow-type';
 
 export enum WorkflowState {
     CREATED = 'CREATED',
@@ -13,6 +14,7 @@ export enum WorkflowState {
 export class Workflow {
     _id: ObjectId;
     state: WorkflowState;
+    type: WorkflowType;
     tasks: Task[];
     assets: WorkflowAsset[];
     createdDate: Date;
