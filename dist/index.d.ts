@@ -7,7 +7,6 @@ export * from './responses/update-response';
 export * from './utils/mongo.utils';
 export * from './utils/security.utils';
 export * from './utils/string.utils';
-export * from './models/upload-asset-type';
 export * from './models/task-type';
 export * from './models/task';
 export * from './models/workflow-type';

@@ -18,5 +18,5 @@ export class Workflow {
     tasks: Task[];
     assets: WorkflowAsset[];
     createdDate: Date;
-    completedDate: Date;
+    completedDate?: Date;
 }
