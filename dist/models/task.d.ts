@@ -10,6 +10,7 @@ export declare enum TaskState {
 }
 export declare class Task {
     _id: ObjectId;
+    workflowId: ObjectId;
     type: TaskType;
     state: TaskState;
     createdDate: Date;

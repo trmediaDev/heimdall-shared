@@ -25,6 +25,7 @@ __exportStar(require("./utils/security.utils"), exports);
 __exportStar(require("./utils/string.utils"), exports);
 __exportStar(require("./models/task-type"), exports);
 __exportStar(require("./models/task"), exports);
+__exportStar(require("./models/workflow-task"), exports);
 __exportStar(require("./models/workflow-type"), exports);
 __exportStar(require("./models/workflow-asset"), exports);
 __exportStar(require("./models/workflow"), exports);
