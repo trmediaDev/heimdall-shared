@@ -11,7 +11,6 @@ export * from './utils/string.utils';
 
 export * from './models/task-type';
 export * from './models/task';
-export * from './models/workflow-task';
 export * from './models/workflow-type';
 export * from './models/workflow-asset';
 export * from './models/workflow';
