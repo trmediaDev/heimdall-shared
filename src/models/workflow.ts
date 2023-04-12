@@ -14,7 +14,7 @@ export class Workflow {
     _id: ObjectId;
     state: WorkflowState;
     type: WorkflowType;
-    tasks: ObjectId[];
+    taskIds: ObjectId[];
     assets: WorkflowAsset[];
     createdDate: Date;
     completedDate?: Date;
