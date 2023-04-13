@@ -9,4 +9,5 @@ var AssetType;
     AssetType["DECORATION_ITEM"] = "decorations_item";
     AssetType["FREE_STYLE_COLLAGE"] = "free_style_collage";
     AssetType["SHAPE"] = "shape";
+    AssetType["TEMP"] = "temp";
 })(AssetType = exports.AssetType || (exports.AssetType = {}));

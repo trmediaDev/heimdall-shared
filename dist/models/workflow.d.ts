@@ -1,4 +1,3 @@
-import { Task } from './task';
 import { ObjectId } from 'bson';
 import { WorkflowAsset } from './workflow-asset';
 import { WorkflowType } from './workflow-type';
@@ -13,8 +12,8 @@ export declare class Workflow {
     _id: ObjectId;
     state: WorkflowState;
     type: WorkflowType;
-    tasks: Task[];
+    taskIds: ObjectId[];
     assets: WorkflowAsset[];
     createdDate: Date;
-    completedDate: Date;
+    completedDate?: Date;
 }

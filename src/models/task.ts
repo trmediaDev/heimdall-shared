@@ -1,7 +1,7 @@
 import { ObjectId } from 'bson';
 import { TaskType } from './task-type';
 
-type TaskData = any;
+export type TaskData = any;
 
 export enum TaskState {
     CREATED = 'CREATED',
@@ -13,10 +13,11 @@ export enum TaskState {
 
 export class Task {
     _id: ObjectId;
+    workflowId: ObjectId;
     type: TaskType;
     state: TaskState;
     createdDate: Date;
     cannotCompleteWorkflowOnComplete: boolean;
-    completedDate: Date;
-    data: TaskData;
+    completedDate?: Date;
+    data?: TaskData;
 }
