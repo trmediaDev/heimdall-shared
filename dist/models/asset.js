@@ -40,7 +40,7 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetFindRequest.prototype, "categorySubcategories", void 0);
 exports.AssetFindRequest = AssetFindRequest;
-/// Asset Patch Request 
+/// Asset Patch Request
 class AssetPatchRequest {
 }
 __decorate([
