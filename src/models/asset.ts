@@ -40,7 +40,6 @@ export declare class AssetPostRequest {
 
     @IsString()
     readableFilename: string;
-    
 
     @IsString()
     @IsOptional()
@@ -65,11 +64,9 @@ export declare class AssetPostRequest {
     originalFilename?: string;
     @IsOptional()
     templateAssetCount?: number;
-
 }
 
-
-/// Asset Patch Request 
+/// Asset Patch Request
 
 export class AssetPatchRequest {
     @IsEnum(AssetType)
@@ -79,7 +76,6 @@ export class AssetPatchRequest {
     @IsString()
     @IsOptional()
     mimeType?: string;
-
 
     @IsString()
     @IsOptional()
@@ -97,7 +93,6 @@ export class AssetPatchRequest {
     @IsOptional()
     originalFilename?: string;
 
-
     @IsArray()
     @IsOptional()
     keywords?: [];
@@ -106,14 +101,13 @@ export class AssetPatchRequest {
     templateAssetCount?: number;
 }
 
-
-// 
+//
 //************* */
 //Asset Model
 //************** */
 //
 
-export class Asset{
+export class Asset {
     @IsEnum(AssetType)
     type: AssetType;
 
@@ -130,7 +124,6 @@ export class Asset{
     @IsString()
     @IsOptional()
     originalFilename?: string;
-
 
     @IsString()
     @IsOptional()
@@ -199,7 +192,6 @@ export class Asset{
 
     @Type(() => Date)
     updatedDate: Date;
-    
 }
 
 export class AssetDBObject extends Asset {
