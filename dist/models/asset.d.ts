@@ -62,3 +62,7 @@ export declare class Asset {
 export declare class AssetDBObject extends Asset {
     _id: ObjectId;
 }
+export declare class TempAssetDBObject extends Asset {
+    _id: ObjectId;
+    filePath: string;
+}

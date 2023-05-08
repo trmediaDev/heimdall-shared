@@ -1,0 +1,4 @@
+export declare enum WorkflowType {
+    BACKGROUND_REMOVE = "BACKGROUND_REMOVE",
+    CLASSIFY_OBJECTS = "CLASSIFY_OBJECTS"
+}

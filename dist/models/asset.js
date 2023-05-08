@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
+exports.TempAssetDBObject = exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
 const bson_1 = require("bson");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
@@ -75,7 +75,7 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "templateAssetCount", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
-// 
+//
 //************* */
 //Asset Model
 //************** */
@@ -170,3 +170,9 @@ __decorate([
     (0, class_transformer_1.Type)(() => bson_1.ObjectId)
 ], AssetDBObject.prototype, "_id", void 0);
 exports.AssetDBObject = AssetDBObject;
+class TempAssetDBObject extends Asset {
+}
+__decorate([
+    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+], TempAssetDBObject.prototype, "_id", void 0);
+exports.TempAssetDBObject = TempAssetDBObject;

@@ -77,6 +77,7 @@ export class AssetPatchRequest {
     @IsOptional()
     mimeType?: string;
 
+
     @IsString()
     @IsOptional()
     readableFilename?: string;
@@ -124,6 +125,7 @@ export class Asset {
     @IsString()
     @IsOptional()
     originalFilename?: string;
+
 
     @IsString()
     @IsOptional()
@@ -192,9 +194,16 @@ export class Asset {
 
     @Type(() => Date)
     updatedDate: Date;
+    
 }
 
 export class AssetDBObject extends Asset {
     @Type(() => ObjectId)
     _id: ObjectId;
+}
+
+export class TempAssetDBObject extends Asset {
+    @Type(() => ObjectId)
+    _id: ObjectId;
+    filePath: string;
 }
