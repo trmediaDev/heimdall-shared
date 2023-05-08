@@ -7,5 +7,6 @@ var AssetType;
     AssetType["STICKER"] = "sticker";
     AssetType["BACKGROUND"] = "background";
     AssetType["DECORATION_ITEM"] = "decorations_item";
+    AssetType["FREE_STYLE_COLLAGE"] = "free_style_collage";
     AssetType["SHAPE"] = "shape";
 })(AssetType = exports.AssetType || (exports.AssetType = {}));

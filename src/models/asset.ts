@@ -5,6 +5,7 @@ import { Document } from 'mongodb';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 
+/// Asset Find request
 export class AssetFindRequest {
     @IsEnum(AssetType)
     @IsOptional()
@@ -32,6 +33,7 @@ export class AssetFindRequest {
     categorySubcategories?: CategorySubcategory[];
 }
 
+/// Asset Post request
 export declare class AssetPostRequest {
     @IsEnum(AssetType)
     type: AssetType;
@@ -61,8 +63,13 @@ export declare class AssetPostRequest {
     @IsString()
     @IsOptional()
     originalFilename?: string;
+    @IsOptional()
+    templateAssetCount?: number;
 
 }
+
+
+/// Asset Patch Request 
 
 export class AssetPatchRequest {
     @IsEnum(AssetType)
@@ -94,6 +101,9 @@ export class AssetPatchRequest {
     @IsArray()
     @IsOptional()
     keywords?: [];
+
+    @IsOptional()
+    templateAssetCount?: number;
 }
 
 
@@ -165,6 +175,9 @@ export class Asset{
     @IsBoolean()
     @IsOptional()
     showInPublicSearch?: boolean;
+
+    @IsOptional()
+    templateAssetCount?: number;
 
     @IsBoolean()
     @IsOptional()

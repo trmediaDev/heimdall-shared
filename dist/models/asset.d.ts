@@ -18,6 +18,7 @@ export declare class AssetPostRequest {
     showInPublicSearch?: boolean;
     keywords?: [];
     originalFilename?: string;
+    templateAssetCount?: number;
 }
 export declare class AssetPatchRequest {
     type?: AssetType;
@@ -27,6 +28,7 @@ export declare class AssetPatchRequest {
     showInPublicSearch?: boolean;
     originalFilename?: string;
     keywords?: [];
+    templateAssetCount?: number;
 }
 export declare class Asset {
     type: AssetType;
@@ -49,6 +51,7 @@ export declare class Asset {
     archived?: boolean;
     disabled?: boolean;
     showInPublicSearch?: boolean;
+    templateAssetCount?: number;
     uploadedForTemplateId?: ObjectId;
     usedByTemplateIds?: ObjectId[];
     uploadedBy?: ObjectId;
