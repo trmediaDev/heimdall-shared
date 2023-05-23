@@ -174,14 +174,14 @@ export class Asset {
     @IsOptional()
     templateAssetCount?: number;
 
-    @IsBoolean()
+    @IsString()
     @IsOptional()
     uploadedForTemplateId?: ObjectId;
-    @IsBoolean()
+    @IsString()
     @IsOptional()
     usedByTemplateIds?: ObjectId[];
 
-    @IsBoolean()
+    @IsString()
     @IsOptional()
     uploadedBy?: ObjectId;
 

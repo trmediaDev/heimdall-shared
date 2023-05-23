@@ -142,15 +142,15 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "templateAssetCount", void 0);
 __decorate([
-    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "uploadedForTemplateId", void 0);
 __decorate([
-    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "usedByTemplateIds", void 0);
 __decorate([
-    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "uploadedBy", void 0);
 __decorate([
