@@ -74,6 +74,10 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "templateAssetCount", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], AssetPatchRequest.prototype, "isPremium", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
 //
 //************* */
@@ -149,6 +153,10 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "usedByTemplateIds", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "isPremium", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()

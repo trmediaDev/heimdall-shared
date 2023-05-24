@@ -16,6 +16,7 @@ export declare class AssetPostRequest {
     mimeType?: string;
     repetable?: boolean;
     showInPublicSearch?: boolean;
+    isPremium?: boolean;
     keywords?: [];
     originalFilename?: string;
     templateAssetCount?: number;
@@ -29,6 +30,7 @@ export declare class AssetPatchRequest {
     originalFilename?: string;
     keywords?: [];
     templateAssetCount?: number;
+    isPremium?: boolean;
 }
 export declare class Asset {
     type: AssetType;
@@ -54,6 +56,7 @@ export declare class Asset {
     templateAssetCount?: number;
     uploadedForTemplateId?: ObjectId;
     usedByTemplateIds?: ObjectId[];
+    isPremium?: boolean;
     uploadedBy?: ObjectId;
     modifiedBy?: ObjectId;
     createdDate: Date;
