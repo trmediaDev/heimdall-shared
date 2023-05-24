@@ -1,7 +1,6 @@
 import { ObjectId } from 'bson';
 import { Type } from 'class-transformer';
 import { IsArray, IsBoolean, IsEnum, IsOptional, IsString, ValidateNested } from 'class-validator';
-import { Document } from 'mongodb';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 
@@ -51,9 +50,14 @@ export declare class AssetPostRequest {
     @IsBoolean()
     @IsOptional()
     repetable?: boolean;
+
     @IsBoolean()
     @IsOptional()
     showInPublicSearch?: boolean;
+
+    @IsBoolean()
+    @IsOptional()
+    isPremium?: boolean;
 
     @IsArray()
     @IsOptional()
@@ -77,7 +81,6 @@ export class AssetPatchRequest {
     @IsOptional()
     mimeType?: string;
 
-
     @IsString()
     @IsOptional()
     readableFilename?: string;
@@ -100,6 +103,10 @@ export class AssetPatchRequest {
 
     @IsOptional()
     templateAssetCount?: number;
+
+    @IsBoolean()
+    @IsOptional()
+    isPremium?: boolean;
 }
 
 //
@@ -125,7 +132,6 @@ export class Asset {
     @IsString()
     @IsOptional()
     originalFilename?: string;
-
 
     @IsString()
     @IsOptional()
@@ -181,6 +187,10 @@ export class Asset {
     @IsOptional()
     usedByTemplateIds?: ObjectId[];
 
+    @IsBoolean()
+    @IsOptional()
+    isPremium?: boolean;
+
     @IsString()
     @IsOptional()
     uploadedBy?: ObjectId;
@@ -194,7 +204,6 @@ export class Asset {
 
     @Type(() => Date)
     updatedDate: Date;
-    
 }
 
 export class AssetDBObject extends Asset {
