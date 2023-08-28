@@ -7,4 +7,5 @@ export enum AssetType {
     SHAPE = 'shape',
     PHOTO = 'photo',
     TEMP = 'temp',
+    FONT_PRESET = 'font_preset',
 }

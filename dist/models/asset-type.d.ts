@@ -5,5 +5,7 @@ export declare enum AssetType {
     DECORATION_ITEM = "decorations_item",
     FREE_STYLE_COLLAGE = "free_style_collage",
     SHAPE = "shape",
-    TEMP = "temp"
+    PHOTO = "photo",
+    TEMP = "temp",
+    FONT_PRESET = "font_preset"
 }
