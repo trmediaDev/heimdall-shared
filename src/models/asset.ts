@@ -190,6 +190,9 @@ export class Asset {
     @IsBoolean()
     @IsOptional()
     isPremium?: boolean;
+    
+    @IsBoolean()
+    publihsed?: boolean;
 
     @IsString()
     @IsOptional()

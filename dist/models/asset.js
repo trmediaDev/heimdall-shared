@@ -158,6 +158,9 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "isPremium", void 0);
 __decorate([
+    (0, class_validator_1.IsBoolean)()
+], Asset.prototype, "publihsed", void 0);
+__decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "uploadedBy", void 0);
