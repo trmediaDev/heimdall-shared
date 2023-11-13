@@ -152,14 +152,21 @@ export class Asset {
     @IsString()
     @IsOptional()
     cachedFilepath?: string;
+    @IsString()
+    @IsOptional()
+    thumbnailName?: string;
 
     @IsString()
     @IsOptional()
     cachedThumbnailpath?: string;
 
-    @IsString()
+    @IsBoolean()
     @IsOptional()
-    thumbnailName?: string;
+    compiledSvgPath?: string;
+
+    @IsBoolean()
+    @IsOptional()
+    compiledSvgName?: string;
 
     @IsBoolean()
     @IsOptional()
@@ -179,6 +186,12 @@ export class Asset {
 
     @IsOptional()
     templateAssetCount?: number;
+    @IsOptional()
+    height?: number;
+    @IsOptional()
+    width?: number;
+    @IsOptional()
+    aspectRatio?: number;
 
     @IsString()
     @IsOptional()
@@ -207,7 +220,6 @@ export class Asset {
 
     @Type(() => Date)
     updatedDate: Date;
-
 }
 
 export class AssetDBObject extends Asset {

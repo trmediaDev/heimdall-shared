@@ -121,11 +121,19 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], Asset.prototype, "cachedThumbnailpath", void 0);
+], Asset.prototype, "thumbnailName", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], Asset.prototype, "thumbnailName", void 0);
+], Asset.prototype, "cachedThumbnailpath", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "compiledSvgPath", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "compiledSvgName", void 0);
 __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
@@ -145,6 +153,15 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "templateAssetCount", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "height", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "width", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "aspectRatio", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
