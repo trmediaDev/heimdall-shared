@@ -190,9 +190,9 @@ export class Asset {
     @IsBoolean()
     @IsOptional()
     isPremium?: boolean;
-    
+
     @IsBoolean()
-    publihsed?: boolean;
+    published?: boolean;
 
     @IsString()
     @IsOptional()
@@ -207,6 +207,7 @@ export class Asset {
 
     @Type(() => Date)
     updatedDate: Date;
+
 }
 
 export class AssetDBObject extends Asset {

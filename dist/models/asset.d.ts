@@ -57,7 +57,7 @@ export declare class Asset {
     uploadedForTemplateId?: ObjectId;
     usedByTemplateIds?: ObjectId[];
     isPremium?: boolean;
-    publihsed?: boolean;
+    published?: boolean;
     uploadedBy?: ObjectId;
     modifiedBy?: ObjectId;
     createdDate: Date;
