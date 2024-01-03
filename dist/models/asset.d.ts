@@ -62,6 +62,7 @@ export declare class Asset {
     cachedServerId?: ObjectId;
     cachedFilepath?: string;
     thumbnailName?: string;
+    cachedThumbnailpath?: string;
     section?: string;
     fileId?: string;
     se?: string;
