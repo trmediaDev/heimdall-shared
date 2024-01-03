@@ -32,6 +32,20 @@ export declare class AssetPatchRequest {
     templateAssetCount?: number;
     isPremium?: boolean;
 }
+export interface ImageVariantsObject {
+    name: string;
+    width: number;
+    height: number;
+}
+export interface Variation {
+    image_thumbnail?: ImageVariantsObject;
+    image_xs?: ImageVariantsObject;
+    image_s?: ImageVariantsObject;
+    image_s2?: ImageVariantsObject;
+    image_s3?: ImageVariantsObject;
+    image_s4?: ImageVariantsObject;
+    image_so?: ImageVariantsObject;
+}
 export declare class Asset {
     type: AssetType;
     /**
@@ -48,7 +62,9 @@ export declare class Asset {
     cachedServerId?: ObjectId;
     cachedFilepath?: string;
     thumbnailName?: string;
-    cachedThumbnailpath?: string;
+    section?: string;
+    fileId?: string;
+    se?: string;
     compiledSvgPath?: string;
     compiledSvgName?: string;
     repetable?: boolean;
@@ -67,6 +83,7 @@ export declare class Asset {
     modifiedBy?: ObjectId;
     createdDate: Date;
     updatedDate: Date;
+    variations: Variation;
 }
 export declare class AssetDBObject extends Asset {
     _id: ObjectId;

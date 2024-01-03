@@ -125,7 +125,15 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], Asset.prototype, "cachedThumbnailpath", void 0);
+], Asset.prototype, "section", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "fileId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "se", void 0);
 __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
