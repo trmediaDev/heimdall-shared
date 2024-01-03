@@ -167,6 +167,9 @@ export class Asset {
     thumbnailName?: string;
     @IsString()
     @IsOptional()
+    cachedThumbnailpath?: string;
+    @IsString()
+    @IsOptional()
     section?: string;
     @IsString()
     @IsOptional()
