@@ -117,14 +117,13 @@ export interface ImageVariantsObject {
     height: number;
 }
 
-export interface Variation {
+export interface Variants {
     image_thumbnail?: ImageVariantsObject;
     image_xs?: ImageVariantsObject;
     image_s?: ImageVariantsObject;
     image_s2?: ImageVariantsObject;
     image_s3?: ImageVariantsObject;
     image_s4?: ImageVariantsObject;
-    image_so?: ImageVariantsObject;
 }
 
 //
@@ -240,7 +239,7 @@ export class Asset {
     @Type(() => Date)
     updatedDate: Date;
 
-    variations: Variation;
+    variants?: Variants;
 }
 
 export class AssetDBObject extends Asset {

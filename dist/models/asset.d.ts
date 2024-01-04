@@ -37,14 +37,13 @@ export interface ImageVariantsObject {
     width: number;
     height: number;
 }
-export interface Variation {
+export interface Variants {
     image_thumbnail?: ImageVariantsObject;
     image_xs?: ImageVariantsObject;
     image_s?: ImageVariantsObject;
     image_s2?: ImageVariantsObject;
     image_s3?: ImageVariantsObject;
     image_s4?: ImageVariantsObject;
-    image_so?: ImageVariantsObject;
 }
 export declare class Asset {
     type: AssetType;
@@ -84,7 +83,7 @@ export declare class Asset {
     modifiedBy?: ObjectId;
     createdDate: Date;
     updatedDate: Date;
-    variations: Variation;
+    variants?: Variants;
 }
 export declare class AssetDBObject extends Asset {
     _id: ObjectId;
