@@ -32,12 +32,12 @@ export declare class AssetPatchRequest {
     templateAssetCount?: number;
     isPremium?: boolean;
 }
-export interface ImageVariantsObject {
+export declare class ImageVariantsObject {
     name: string;
     width: number;
     height: number;
 }
-export interface Variants {
+export declare class Variants {
     image_thumbnail?: ImageVariantsObject;
     image_xs?: ImageVariantsObject;
     image_s?: ImageVariantsObject;

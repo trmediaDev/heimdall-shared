@@ -111,13 +111,13 @@ export class AssetPatchRequest {
 
 /// Asset Variation
 
-export interface ImageVariantsObject {
+export class ImageVariantsObject {
     name: string;
     width: number;
     height: number;
 }
 
-export interface Variants {
+export class Variants {
     image_thumbnail?: ImageVariantsObject;
     image_xs?: ImageVariantsObject;
     image_s?: ImageVariantsObject;
@@ -239,6 +239,7 @@ export class Asset {
     @Type(() => Date)
     updatedDate: Date;
 
+    @Type(() => Variants)
     variants?: Variants;
 }
 

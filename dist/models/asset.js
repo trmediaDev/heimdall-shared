@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TempAssetDBObject = exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
+exports.TempAssetDBObject = exports.AssetDBObject = exports.Asset = exports.Variants = exports.ImageVariantsObject = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
 const bson_1 = require("bson");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
@@ -79,6 +79,13 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "isPremium", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;
+/// Asset Variation
+class ImageVariantsObject {
+}
+exports.ImageVariantsObject = ImageVariantsObject;
+class Variants {
+}
+exports.Variants = Variants;
 //
 //************* */
 //Asset Model
@@ -203,6 +210,9 @@ __decorate([
 __decorate([
     (0, class_transformer_1.Type)(() => Date)
 ], Asset.prototype, "updatedDate", void 0);
+__decorate([
+    (0, class_transformer_1.Type)(() => Variants)
+], Asset.prototype, "variants", void 0);
 exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
