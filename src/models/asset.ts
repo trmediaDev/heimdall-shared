@@ -118,13 +118,14 @@ export class ImageVariantsObject {
 }
 
 export class Variants {
-    image_thumbnail?: ImageVariantsObject;
-    image_xs?: ImageVariantsObject;
-    image_s?: ImageVariantsObject;
-    image_s2?: ImageVariantsObject;
-    image_s3?: ImageVariantsObject;
-    image_s4?: ImageVariantsObject;
-    image_s5?: ImageVariantsObject;
+    thumb_xs?: ImageVariantsObject;
+    thumb?: ImageVariantsObject;
+    xs?: ImageVariantsObject;
+    s?: ImageVariantsObject;
+    s2?: ImageVariantsObject;
+    s3?: ImageVariantsObject;
+    s4?: ImageVariantsObject;
+    s5?: ImageVariantsObject;
 }
 
 //
