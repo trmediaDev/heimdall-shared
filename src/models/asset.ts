@@ -1,6 +1,6 @@
 import { ObjectId } from 'bson';
 import { Type } from 'class-transformer';
-import { IsArray, IsBoolean, IsEnum, IsOptional, IsString, ValidateNested } from 'class-validator';
+import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 
@@ -171,7 +171,7 @@ export class Asset {
     cachedThumbnailpath?: string;
     @IsString()
     @IsOptional()
-    section?: string;
+    parentFolderId?: string;
     @IsString()
     @IsOptional()
     fileId?: string;
@@ -206,8 +206,10 @@ export class Asset {
 
     @IsOptional()
     templateAssetCount?: number;
+    @IsNumber()
     @IsOptional()
     height?: number;
+    @IsNumber()
     @IsOptional()
     width?: number;
     @IsOptional()

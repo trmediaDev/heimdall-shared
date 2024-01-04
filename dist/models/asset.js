@@ -136,7 +136,7 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()
-], Asset.prototype, "section", void 0);
+], Asset.prototype, "parentFolderId", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)()

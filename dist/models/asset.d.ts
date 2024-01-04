@@ -38,12 +38,14 @@ export declare class ImageVariantsObject {
     height: number;
 }
 export declare class Variants {
-    image_thumbnail?: ImageVariantsObject;
-    image_xs?: ImageVariantsObject;
-    image_s?: ImageVariantsObject;
-    image_s2?: ImageVariantsObject;
-    image_s3?: ImageVariantsObject;
-    image_s4?: ImageVariantsObject;
+    thumb_xs?: ImageVariantsObject;
+    thumb?: ImageVariantsObject;
+    xs?: ImageVariantsObject;
+    s?: ImageVariantsObject;
+    s2?: ImageVariantsObject;
+    s3?: ImageVariantsObject;
+    s4?: ImageVariantsObject;
+    s5?: ImageVariantsObject;
 }
 export declare class Asset {
     type: AssetType;
@@ -62,7 +64,7 @@ export declare class Asset {
     cachedFilepath?: string;
     thumbnailName?: string;
     cachedThumbnailpath?: string;
-    section?: string;
+    parentFolderId?: string;
     fileId?: string;
     se?: string;
     compiledSvgPath?: string;
