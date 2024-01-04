@@ -124,6 +124,7 @@ export class Variants {
     image_s2?: ImageVariantsObject;
     image_s3?: ImageVariantsObject;
     image_s4?: ImageVariantsObject;
+    image_s5?: ImageVariantsObject;
 }
 
 //
