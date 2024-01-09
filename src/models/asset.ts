@@ -112,7 +112,8 @@ export class AssetPatchRequest {
 /// Asset Variation
 
 export class ImageVariantsObject {
-    name: string;
+    fileName: string;
+    key: string;
     width: number;
     height: number;
 }

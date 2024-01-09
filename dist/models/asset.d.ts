@@ -33,7 +33,8 @@ export declare class AssetPatchRequest {
     isPremium?: boolean;
 }
 export declare class ImageVariantsObject {
-    name: string;
+    fileName: string;
+    key: string;
     width: number;
     height: number;
 }
