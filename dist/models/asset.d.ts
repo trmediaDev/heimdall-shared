@@ -34,6 +34,7 @@ export declare class AssetPatchRequest {
 }
 export declare class ImageVariantsObject {
     name: string;
+    key: string;
     width: number;
     height: number;
 }
