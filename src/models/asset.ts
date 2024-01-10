@@ -3,6 +3,8 @@ import { Type } from 'class-transformer';
 import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
+import { join } from 'path';
+import { imageVariantOptions, Variants } from './AssetVariants';
 
 /// Asset Find request
 export class AssetFindRequest {
@@ -107,26 +109,6 @@ export class AssetPatchRequest {
     @IsBoolean()
     @IsOptional()
     isPremium?: boolean;
-}
-
-/// Asset Variation
-
-export class ImageVariantsObject {
-    fileName: string;
-    key: string;
-    width: number;
-    height: number;
-}
-
-export class Variants {
-    thumb_xs?: ImageVariantsObject;
-    thumb?: ImageVariantsObject;
-    xs?: ImageVariantsObject;
-    s?: ImageVariantsObject;
-    s2?: ImageVariantsObject;
-    s3?: ImageVariantsObject;
-    s4?: ImageVariantsObject;
-    s5?: ImageVariantsObject;
 }
 
 //
@@ -258,3 +240,44 @@ export class TempAssetDBObject extends Asset {
     _id: ObjectId;
     filePath: string;
 }
+
+// asset extensions
+export interface Asset {
+    buildOriginalFilePath(): string | undefined;
+
+    buildVariantFilePath(variantName: string): string | undefined;
+
+    getClosestVariantNameIfMissing(variantName: string): string | undefined;
+
+    buildThumbnailPath(): string | undefined;
+}
+
+Asset.prototype.buildOriginalFilePath = function (): string | undefined {
+    if (!this.parentFolderId || !this.fileId || !this.filename) return undefined;
+    return join(this.parentFolderId, this.fileId, this.filename);
+};
+
+Asset.prototype.buildVariantFilePath = function (variantName: string): string | undefined {
+    if (this.variants && this.variants[variantName]) {
+        return join(this.parentFolderId, this.fileId, this.variants[variantName]?.filename);
+    }
+    return undefined;
+};
+
+Asset.prototype.getClosestVariantNameIfMissing = function (variantName: string): string {
+    if (this.variants) {
+        if (!this.variants[variantName]) {
+            const optionLargeToSmall = imageVariantOptions.reverse();
+            for (const option of optionLargeToSmall) {
+                if (this.variants[option.name]) {
+                    return option.name;
+                }
+            }
+        }
+    }
+    return variantName;
+};
+
+Asset.prototype.buildThumbnailPath = function (): string | undefined {
+    return this.buildVariantFilePath('thumb');
+};

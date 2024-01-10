@@ -1,6 +1,7 @@
 import { ObjectId } from 'bson';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
+import { Variants } from './AssetVariants';
 export declare class AssetFindRequest {
     type?: AssetType;
     filename?: string | RegExp;
@@ -31,22 +32,6 @@ export declare class AssetPatchRequest {
     keywords?: [];
     templateAssetCount?: number;
     isPremium?: boolean;
-}
-export declare class ImageVariantsObject {
-    fileName: string;
-    key: string;
-    width: number;
-    height: number;
-}
-export declare class Variants {
-    thumb_xs?: ImageVariantsObject;
-    thumb?: ImageVariantsObject;
-    xs?: ImageVariantsObject;
-    s?: ImageVariantsObject;
-    s2?: ImageVariantsObject;
-    s3?: ImageVariantsObject;
-    s4?: ImageVariantsObject;
-    s5?: ImageVariantsObject;
 }
 export declare class Asset {
     type: AssetType;
@@ -94,4 +79,10 @@ export declare class AssetDBObject extends Asset {
 export declare class TempAssetDBObject extends Asset {
     _id: ObjectId;
     filePath: string;
+}
+export interface Asset {
+    buildOriginalFilePath(): string | undefined;
+    buildVariantFilePath(variantName: string): string | undefined;
+    getClosestVariantNameIfMissing(variantName: string): string | undefined;
+    buildThumbnailPath(): string | undefined;
 }
