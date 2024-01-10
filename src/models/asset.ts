@@ -3,8 +3,7 @@ import { Type } from 'class-transformer';
 import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
-import { join } from 'path';
-import { imageVariantOptions, Variants } from './asset.variants';
+import { Variants } from './asset.variants';
 
 /// Asset Find request
 export class AssetFindRequest {
@@ -228,8 +227,6 @@ export class Asset {
 
     @Type(() => Variants)
     variants?: Variants;
-
-
 }
 
 export class AssetDBObject extends Asset {
