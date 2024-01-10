@@ -1,4 +1,5 @@
 export * from './models/asset';
+export * from './models/asset.variants';
 export * from './models/asset.change.log';
 export * from './models/asset-type';
 export * from './models/categorysubcategory';
@@ -7,6 +8,7 @@ export * from './responses/insert-response';
 export * from './responses/update-response';
 
 export * from './utils/mongo.utils';
+export * from './utils/asset.helpers';
 export * from './utils/security.utils';
 export * from './utils/string.utils';
 

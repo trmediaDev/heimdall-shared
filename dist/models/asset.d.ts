@@ -80,9 +80,3 @@ export declare class TempAssetDBObject extends Asset {
     _id: ObjectId;
     filePath: string;
 }
-export interface Asset {
-    buildOriginalFilePath(): string | undefined;
-    buildVariantFilePath(variantName: string): string | undefined;
-    getClosestVariantNameIfMissing(variantName: string): string | undefined;
-    buildThumbnailPath(): string | undefined;
-}

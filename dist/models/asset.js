@@ -11,7 +11,6 @@ const bson_1 = require("bson");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const asset_type_1 = require("./asset-type");
-const path_1 = require("path");
 const asset_variants_1 = require("./asset.variants");
 /// Asset Find request
 class AssetFindRequest {
@@ -223,31 +222,3 @@ __decorate([
     (0, class_transformer_1.Type)(() => bson_1.ObjectId)
 ], TempAssetDBObject.prototype, "_id", void 0);
 exports.TempAssetDBObject = TempAssetDBObject;
-Asset.prototype.buildOriginalFilePath = function () {
-    if (!this.parentFolderId || !this.fileId || !this.filename)
-        return undefined;
-    return (0, path_1.join)(this.parentFolderId, this.fileId, this.filename);
-};
-Asset.prototype.buildVariantFilePath = function (variantName) {
-    var _a;
-    if (this.variants && this.variants[variantName]) {
-        return (0, path_1.join)(this.parentFolderId, this.fileId, (_a = this.variants[variantName]) === null || _a === void 0 ? void 0 : _a.filename);
-    }
-    return undefined;
-};
-Asset.prototype.getClosestVariantNameIfMissing = function (variantName) {
-    if (this.variants) {
-        if (!this.variants[variantName]) {
-            const optionLargeToSmall = asset_variants_1.imageVariantOptions.reverse();
-            for (const option of optionLargeToSmall) {
-                if (this.variants[option.name]) {
-                    return option.name;
-                }
-            }
-        }
-    }
-    return variantName;
-};
-Asset.prototype.buildThumbnailPath = function () {
-    return this.buildVariantFilePath('thumb');
-};
