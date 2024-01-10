@@ -12,7 +12,7 @@ const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const asset_type_1 = require("./asset-type");
 const path_1 = require("path");
-const AssetVariants_1 = require("./AssetVariants");
+const asset_variants_1 = require("./asset.variants");
 /// Asset Find request
 class AssetFindRequest {
 }
@@ -208,7 +208,7 @@ __decorate([
     (0, class_transformer_1.Type)(() => Date)
 ], Asset.prototype, "updatedDate", void 0);
 __decorate([
-    (0, class_transformer_1.Type)(() => AssetVariants_1.Variants)
+    (0, class_transformer_1.Type)(() => asset_variants_1.Variants)
 ], Asset.prototype, "variants", void 0);
 exports.Asset = Asset;
 class AssetDBObject extends Asset {
@@ -238,7 +238,7 @@ Asset.prototype.buildVariantFilePath = function (variantName) {
 Asset.prototype.getClosestVariantNameIfMissing = function (variantName) {
     if (this.variants) {
         if (!this.variants[variantName]) {
-            const optionLargeToSmall = AssetVariants_1.imageVariantOptions.reverse();
+            const optionLargeToSmall = asset_variants_1.imageVariantOptions.reverse();
             for (const option of optionLargeToSmall) {
                 if (this.variants[option.name]) {
                     return option.name;

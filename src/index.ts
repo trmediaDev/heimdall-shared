@@ -1,4 +1,5 @@
 export * from './models/asset';
+export * from './models/asset.change.log';
 export * from './models/asset-type';
 export * from './models/categorysubcategory';
 export * from './models/server';

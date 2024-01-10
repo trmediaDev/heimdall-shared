@@ -1,7 +1,7 @@
 import { ObjectId } from 'bson';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
-import { Variants } from './AssetVariants';
+import { Variants } from './asset.variants';
 export declare class AssetFindRequest {
     type?: AssetType;
     filename?: string | RegExp;

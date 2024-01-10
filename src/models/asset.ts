@@ -4,7 +4,7 @@ import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNes
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 import { join } from 'path';
-import { imageVariantOptions, Variants } from './AssetVariants';
+import { imageVariantOptions, Variants } from './asset.variants';
 
 /// Asset Find request
 export class AssetFindRequest {
