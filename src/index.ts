@@ -19,3 +19,4 @@ export * from './models/workflow-asset';
 export * from './models/workflow';
 export * from './models/image-classify-task';
 export * from './models/image-segment-task';
+export * from 'mongodb';
