@@ -11,6 +11,7 @@ const bson_1 = require("bson");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const asset_type_1 = require("./asset-type");
+const asset_variants_1 = require("./asset.variants");
 /// Asset Find request
 class AssetFindRequest {
 }
@@ -127,6 +128,18 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "cachedThumbnailpath", void 0);
 __decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "parentFolderId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "fileId", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "se", void 0);
+__decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "compiledSvgPath", void 0);
@@ -154,9 +167,11 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "templateAssetCount", void 0);
 __decorate([
+    (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "height", void 0);
 __decorate([
+    (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "width", void 0);
 __decorate([
@@ -191,6 +206,9 @@ __decorate([
 __decorate([
     (0, class_transformer_1.Type)(() => Date)
 ], Asset.prototype, "updatedDate", void 0);
+__decorate([
+    (0, class_transformer_1.Type)(() => asset_variants_1.Variants)
+], Asset.prototype, "variants", void 0);
 exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
