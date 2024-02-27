@@ -1,6 +1,7 @@
 import { ObjectId } from 'bson';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
+import { Variants } from './asset.variants';
 export declare class AssetFindRequest {
     type?: AssetType;
     filename?: string | RegExp;
@@ -49,6 +50,9 @@ export declare class Asset {
     cachedFilepath?: string;
     thumbnailName?: string;
     cachedThumbnailpath?: string;
+    parentFolderId?: string;
+    fileId?: string;
+    se?: string;
     compiledSvgPath?: string;
     compiledSvgName?: string;
     repetable?: boolean;
@@ -67,6 +71,7 @@ export declare class Asset {
     modifiedBy?: ObjectId;
     createdDate: Date;
     updatedDate: Date;
+    variants?: Variants;
 }
 export declare class AssetDBObject extends Asset {
     _id: ObjectId;
