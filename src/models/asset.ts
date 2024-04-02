@@ -234,7 +234,6 @@ export class AssetPatchRequest {
 }
 
 
-
 export class TempAssetDBObject extends Asset {
     @Type(() => ObjectId)
     _id: ObjectId;
