@@ -33,4 +33,3 @@ __exportStar(require("./models/workflow-asset"), exports);
 __exportStar(require("./models/workflow"), exports);
 __exportStar(require("./models/image-classify-task"), exports);
 __exportStar(require("./models/image-segment-task"), exports);
-__exportStar(require("mongodb"), exports);

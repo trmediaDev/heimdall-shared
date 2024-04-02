@@ -1,4 +1,4 @@
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 import { AssetType } from './asset-type';
 import { CategorySubcategory } from './categorysubcategory';
 import { Variants } from './asset.variants';

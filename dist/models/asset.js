@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TempAssetDBObject = exports.AssetPatchRequest = exports.AssetFindRequest = exports.AssetDBObject = exports.Asset = void 0;
-const bson_1 = require("bson");
+const mongodb_1 = require("mongodb");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const asset_type_1 = require("./asset-type");
@@ -44,7 +44,7 @@ __decorate([
     (0, class_validator_1.IsArray)()
 ], Asset.prototype, "keywords", void 0);
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId),
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "cachedServerId", void 0);
 __decorate([
@@ -145,7 +145,7 @@ exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], AssetDBObject.prototype, "_id", void 0);
 exports.AssetDBObject = AssetDBObject;
 /// Asset Find request
@@ -219,6 +219,6 @@ exports.AssetPatchRequest = AssetPatchRequest;
 class TempAssetDBObject extends Asset {
 }
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], TempAssetDBObject.prototype, "_id", void 0);
 exports.TempAssetDBObject = TempAssetDBObject;
