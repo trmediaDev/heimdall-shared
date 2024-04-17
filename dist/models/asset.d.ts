@@ -41,11 +41,11 @@ export declare class Asset {
     updatedDate: Date;
     variants?: Variants;
     embedding?: number[];
-    tagIds: [{
+    tagIds?: [{
         id: ObjectId;
         score: string;
     }];
-    tags: [{
+    tags?: [{
         name: string;
         score: string;
     }];

@@ -121,8 +121,8 @@ export class Asset {
     @Type(() => Variants)
     variants?: Variants;
     embedding?: number[];
-    tagIds: [{ id: ObjectId; score: string }];
-    tags: [{ name: string; score: string }];
+    tagIds?: [{ id: ObjectId; score: string }];
+    tags?: [{ name: string; score: string }];
 }
 
 export class AssetDBObject extends Asset {
