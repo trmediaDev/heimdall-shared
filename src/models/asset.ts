@@ -1,8 +1,7 @@
 import { ObjectId } from 'mongodb';
 import { Type } from 'class-transformer';
-import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
+import { IsArray, IsBoolean, IsEnum, IsNumber, IsOptional, IsString } from 'class-validator';
 import { AssetType } from './asset-type';
-import { CategorySubcategory } from './categorysubcategory';
 import { Variants } from './asset.variants';
 //
 //************* */
@@ -122,117 +121,14 @@ export class Asset {
     @Type(() => Variants)
     variants?: Variants;
     embedding?: number[];
+    tagIds: [{ id: ObjectId; score: string }];
+    tags: [{ name: string; score: string }];
 }
 
 export class AssetDBObject extends Asset {
     @Type(() => ObjectId)
     _id: ObjectId;
 }
-/// Asset Find request
-export class AssetFindRequest {
-    @IsEnum(AssetType)
-    @IsOptional()
-    type?: AssetType;
-
-    @IsString()
-    @IsOptional()
-    filename?: string | RegExp;
-
-    @IsString()
-    @IsOptional()
-    readableFilename?: string;
-
-    @IsString()
-    @IsOptional()
-    originalFilename?: string;
-
-    @IsString()
-    @IsOptional()
-    description?: string;
-
-    @IsArray()
-    @ValidateNested()
-    @IsOptional()
-    categorySubcategories?: CategorySubcategory[];
-}
-
-/// Asset Post request
-export declare class AssetPostRequest {
-    @IsEnum(AssetType)
-    type: AssetType;
-
-    @IsString()
-    readableFilename: string;
-
-    @IsString()
-    @IsOptional()
-    description?: string;
-    @IsString()
-    @IsOptional()
-    mimeType?: string;
-
-    @IsBoolean()
-    @IsOptional()
-    repetable?: boolean;
-
-    @IsBoolean()
-    @IsOptional()
-    showInPublicSearch?: boolean;
-
-    @IsBoolean()
-    @IsOptional()
-    isPremium?: boolean;
-
-    @IsArray()
-    @IsOptional()
-    keywords?: [];
-
-    @IsString()
-    @IsOptional()
-    originalFilename?: string;
-    @IsOptional()
-    templateAssetCount?: number;
-}
-
-/// Asset Patch Request
-
-export class AssetPatchRequest {
-    @IsEnum(AssetType)
-    @IsOptional()
-    type?: AssetType;
-
-    @IsString()
-    @IsOptional()
-    mimeType?: string;
-
-    @IsString()
-    @IsOptional()
-    readableFilename?: string;
-
-    @IsString()
-    @IsOptional()
-    description?: string;
-
-    @IsBoolean()
-    @IsOptional()
-    showInPublicSearch?: boolean;
-
-    @IsString()
-    @IsOptional()
-    originalFilename?: string;
-
-    @IsArray()
-    @IsOptional()
-    keywords?: [];
-
-    @IsOptional()
-    templateAssetCount?: number;
-
-    @IsBoolean()
-    @IsOptional()
-    isPremium?: boolean;
-}
-
 
 export class TempAssetDBObject extends Asset {
     @Type(() => ObjectId)
