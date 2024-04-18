@@ -18,7 +18,7 @@ __exportStar(require("./models/asset"), exports);
 __exportStar(require("./models/asset.tags"), exports);
 __exportStar(require("./models/asset.post.request"), exports);
 __exportStar(require("./models/asset.find.request"), exports);
-__exportStar(require("./models/asset.post.request"), exports);
+__exportStar(require("./models/asset.patch.request"), exports);
 __exportStar(require("./models/asset.variants"), exports);
 __exportStar(require("./models/asset.change.log"), exports);
 __exportStar(require("./models/asset-type"), exports);
