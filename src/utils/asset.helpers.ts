@@ -10,7 +10,7 @@ export class AssetHelpers {
 
     static buildVariantFilePath(asset: AssetDBObject, variantName: string): string | undefined {
         if (asset.variants && asset.variants[variantName]) {
-            return join(asset.parentFolderId, asset.fileId, asset.variants[variantName]?.filename);
+            return join(asset.parentFolderId!, asset.fileId!, asset!.variants[variantName]?.filename);
         }
         return undefined;
     }

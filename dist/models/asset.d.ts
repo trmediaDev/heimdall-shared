@@ -41,14 +41,12 @@ export declare class Asset {
     updatedDate: Date;
     variants?: Variants;
     embedding?: number[];
-    tagIds?: [{
-        id: ObjectId;
-        score: string;
-    }];
-    tags?: [{
-        name: string;
-        score: string;
-    }];
+    tags?: IAssetTag[];
+}
+export interface IAssetTag {
+    id: ObjectId;
+    name: string;
+    score?: number;
 }
 export declare class AssetDBObject extends Asset {
     _id: ObjectId;
