@@ -2,6 +2,7 @@ import { ObjectId } from 'mongodb';
 import { AssetType } from './asset-type';
 export enum TagProvider {
     GOOGLE = 'google',
+    MANUAL = 'manual',
 }
 
 export class Tag {

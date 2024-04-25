@@ -1,6 +1,7 @@
 import { ObjectId } from 'mongodb';
 export declare enum TagProvider {
-    GOOGLE = "google"
+    GOOGLE = "google",
+    MANUAL = "manual"
 }
 export declare class Tag {
     name?: string;
