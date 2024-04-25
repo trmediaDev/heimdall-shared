@@ -4,6 +4,7 @@ exports.TagDbObject = exports.Tag = exports.TagProvider = void 0;
 var TagProvider;
 (function (TagProvider) {
     TagProvider["GOOGLE"] = "google";
+    TagProvider["MANUAL"] = "manual";
 })(TagProvider = exports.TagProvider || (exports.TagProvider = {}));
 class Tag {
 }
