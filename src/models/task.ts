@@ -1,4 +1,4 @@
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 import { TaskType } from './task-type';
 
 export type TaskData = any;

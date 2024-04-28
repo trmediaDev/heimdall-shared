@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MongoUtils = void 0;
-const bson_1 = require("bson");
+const mongodb_1 = require("mongodb");
 var MongoUtils;
 (function (MongoUtils) {
     function toObjectId(oid) {
-        return oid instanceof bson_1.ObjectId ? oid : new bson_1.ObjectId(oid);
+        return oid instanceof mongodb_1.ObjectId ? oid : new mongodb_1.ObjectId(oid);
     }
     MongoUtils.toObjectId = toObjectId;
     function oidToString(oid) {
@@ -13,7 +13,7 @@ var MongoUtils;
     }
     MongoUtils.oidToString = oidToString;
     function isOID(oid) {
-        return bson_1.ObjectId.isValid(oid);
+        return mongodb_1.ObjectId.isValid(oid);
     }
     MongoUtils.isOID = isOID;
 })(MongoUtils = exports.MongoUtils || (exports.MongoUtils = {}));

@@ -1,4 +1,4 @@
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 export declare type MongoOID = string | ObjectId;
 export declare type StringOrRegEx = string | RegExp;
 export declare namespace MongoUtils {
