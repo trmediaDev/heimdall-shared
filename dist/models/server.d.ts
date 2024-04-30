@@ -1,4 +1,4 @@
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 export declare enum ServerCapability {
     STORAGE = "storage",
     API = "api"

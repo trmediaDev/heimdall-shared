@@ -1,4 +1,4 @@
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 
 export type MongoOID = string | ObjectId;
 export type StringOrRegEx = string | RegExp;

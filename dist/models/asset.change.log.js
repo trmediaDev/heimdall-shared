@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const asset_1 = require("./asset");
 const class_transformer_1 = require("class-transformer");
-const bson_1 = require("bson");
+const mongodb_1 = require("mongodb");
 var AssetChangeLogType;
 (function (AssetChangeLogType) {
     AssetChangeLogType["CREATE"] = "CREATE";
@@ -21,7 +21,7 @@ __decorate([
     (0, class_transformer_1.Type)(() => asset_1.AssetDBObject)
 ], AssetChangeLog.prototype, "asset", void 0);
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], AssetChangeLog.prototype, "assetId", void 0);
 __decorate([
     (0, class_transformer_1.Type)(() => Date)

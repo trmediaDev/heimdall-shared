@@ -6,80 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TempAssetDBObject = exports.AssetDBObject = exports.Asset = exports.AssetPatchRequest = exports.AssetFindRequest = void 0;
-const bson_1 = require("bson");
+exports.TempAssetDBObject = exports.AssetDBObject = exports.Asset = void 0;
+const mongodb_1 = require("mongodb");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const asset_type_1 = require("./asset-type");
 const asset_variants_1 = require("./asset.variants");
-/// Asset Find request
-class AssetFindRequest {
-}
-__decorate([
-    (0, class_validator_1.IsEnum)(asset_type_1.AssetType),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "type", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "filename", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "readableFilename", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "originalFilename", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "description", void 0);
-__decorate([
-    (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.ValidateNested)(),
-    (0, class_validator_1.IsOptional)()
-], AssetFindRequest.prototype, "categorySubcategories", void 0);
-exports.AssetFindRequest = AssetFindRequest;
-/// Asset Patch Request
-class AssetPatchRequest {
-}
-__decorate([
-    (0, class_validator_1.IsEnum)(asset_type_1.AssetType),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "type", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "mimeType", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "readableFilename", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "description", void 0);
-__decorate([
-    (0, class_validator_1.IsBoolean)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "showInPublicSearch", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "originalFilename", void 0);
-__decorate([
-    (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "keywords", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "templateAssetCount", void 0);
-__decorate([
-    (0, class_validator_1.IsBoolean)(),
-    (0, class_validator_1.IsOptional)()
-], AssetPatchRequest.prototype, "isPremium", void 0);
-exports.AssetPatchRequest = AssetPatchRequest;
 //
 //************* */
 //Asset Model
@@ -112,7 +44,7 @@ __decorate([
     (0, class_validator_1.IsArray)()
 ], Asset.prototype, "keywords", void 0);
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId),
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "cachedServerId", void 0);
 __decorate([
@@ -213,12 +145,12 @@ exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], AssetDBObject.prototype, "_id", void 0);
 exports.AssetDBObject = AssetDBObject;
 class TempAssetDBObject extends Asset {
 }
 __decorate([
-    (0, class_transformer_1.Type)(() => bson_1.ObjectId)
+    (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], TempAssetDBObject.prototype, "_id", void 0);
 exports.TempAssetDBObject = TempAssetDBObject;

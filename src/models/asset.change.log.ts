@@ -1,6 +1,6 @@
 import { AssetDBObject } from './asset';
 import { Type } from 'class-transformer';
-import { ObjectId } from 'bson';
+import { ObjectId } from 'mongodb';
 
 enum AssetChangeLogType {
     CREATE = 'CREATE',
