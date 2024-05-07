@@ -8,7 +8,7 @@ var TaskState;
     TaskState["FAILED"] = "FAILED";
     TaskState["CANCELED"] = "CANCELED";
     TaskState["COMPLETED"] = "COMPLETED";
-})(TaskState = exports.TaskState || (exports.TaskState = {}));
+})(TaskState || (exports.TaskState = TaskState = {}));
 class Task {
 }
 exports.Task = Task;

@@ -12,4 +12,4 @@ var AssetType;
     AssetType["PHOTO"] = "photo";
     AssetType["TEMP"] = "temp";
     AssetType["FONT_PRESET"] = "font_preset";
-})(AssetType = exports.AssetType || (exports.AssetType = {}));
+})(AssetType || (exports.AssetType = AssetType = {}));

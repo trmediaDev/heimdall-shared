@@ -8,7 +8,7 @@ var WorkflowState;
     WorkflowState["FAILED"] = "FAILED";
     WorkflowState["CANCELED"] = "CANCELED";
     WorkflowState["COMPLETED"] = "COMPLETED";
-})(WorkflowState = exports.WorkflowState || (exports.WorkflowState = {}));
+})(WorkflowState || (exports.WorkflowState = WorkflowState = {}));
 class Workflow {
 }
 exports.Workflow = Workflow;

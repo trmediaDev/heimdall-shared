@@ -12,6 +12,7 @@ const asset_type_1 = require("./asset-type");
 /// Asset Patch Request
 class AssetPatchRequest {
 }
+exports.AssetPatchRequest = AssetPatchRequest;
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType),
     (0, class_validator_1.IsOptional)()
@@ -47,4 +48,3 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "isPremium", void 0);
-exports.AssetPatchRequest = AssetPatchRequest;

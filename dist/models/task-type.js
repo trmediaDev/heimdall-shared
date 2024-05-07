@@ -5,4 +5,4 @@ var TaskType;
 (function (TaskType) {
     TaskType["IMAGE_CLASSIFY"] = "IMAGE_CLASSIFY";
     TaskType["IMAGE_SEGMENT"] = "IMAGE_SEGMENT";
-})(TaskType = exports.TaskType || (exports.TaskType = {}));
+})(TaskType || (exports.TaskType = TaskType = {}));

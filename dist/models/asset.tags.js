@@ -5,7 +5,7 @@ var TagProvider;
 (function (TagProvider) {
     TagProvider["GOOGLE"] = "google";
     TagProvider["MANUAL"] = "manual";
-})(TagProvider = exports.TagProvider || (exports.TagProvider = {}));
+})(TagProvider || (exports.TagProvider = TagProvider = {}));
 class Tag {
 }
 exports.Tag = Tag;
