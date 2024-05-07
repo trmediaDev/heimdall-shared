@@ -34,4 +34,4 @@ var SecurityUtils;
         });
     }
     SecurityUtils.compare = compare;
-})(SecurityUtils || (exports.SecurityUtils = SecurityUtils = {}));
+})(SecurityUtils = exports.SecurityUtils || (exports.SecurityUtils = {}));

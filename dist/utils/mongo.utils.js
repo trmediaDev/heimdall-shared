@@ -16,4 +16,4 @@ var MongoUtils;
         return mongodb_1.ObjectId.isValid(oid);
     }
     MongoUtils.isOID = isOID;
-})(MongoUtils || (exports.MongoUtils = MongoUtils = {}));
+})(MongoUtils = exports.MongoUtils || (exports.MongoUtils = {}));

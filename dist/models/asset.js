@@ -19,7 +19,6 @@ const asset_variants_1 = require("./asset.variants");
 //
 class Asset {
 }
-exports.Asset = Asset;
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType)
 ], Asset.prototype, "type", void 0);
@@ -142,15 +141,16 @@ __decorate([
 __decorate([
     (0, class_transformer_1.Type)(() => asset_variants_1.Variants)
 ], Asset.prototype, "variants", void 0);
+exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }
-exports.AssetDBObject = AssetDBObject;
 __decorate([
     (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], AssetDBObject.prototype, "_id", void 0);
+exports.AssetDBObject = AssetDBObject;
 class TempAssetDBObject extends Asset {
 }
-exports.TempAssetDBObject = TempAssetDBObject;
 __decorate([
     (0, class_transformer_1.Type)(() => mongodb_1.ObjectId)
 ], TempAssetDBObject.prototype, "_id", void 0);
+exports.TempAssetDBObject = TempAssetDBObject;

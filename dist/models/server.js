@@ -5,7 +5,7 @@ var ServerCapability;
 (function (ServerCapability) {
     ServerCapability["STORAGE"] = "storage";
     ServerCapability["API"] = "api";
-})(ServerCapability || (exports.ServerCapability = ServerCapability = {}));
+})(ServerCapability = exports.ServerCapability || (exports.ServerCapability = {}));
 class ServerCapabilityStatus {
 }
 exports.ServerCapabilityStatus = ServerCapabilityStatus;

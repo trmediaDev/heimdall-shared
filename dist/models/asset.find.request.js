@@ -12,7 +12,6 @@ const asset_type_1 = require("./asset-type");
 /// Asset Find request
 class AssetFindRequest {
 }
-exports.AssetFindRequest = AssetFindRequest;
 __decorate([
     (0, class_validator_1.IsEnum)(asset_type_1.AssetType),
     (0, class_validator_1.IsOptional)()
@@ -38,3 +37,4 @@ __decorate([
     (0, class_validator_1.ValidateNested)(),
     (0, class_validator_1.IsOptional)()
 ], AssetFindRequest.prototype, "categorySubcategories", void 0);
+exports.AssetFindRequest = AssetFindRequest;
