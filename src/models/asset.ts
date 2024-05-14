@@ -122,6 +122,9 @@ export class Asset {
     variants?: Variants;
     embedding?: number[];
     tags?: IAssetTag[];
+
+    @IsOptional()
+    foreign?: boolean;
 }
 
 export interface IAssetTag {

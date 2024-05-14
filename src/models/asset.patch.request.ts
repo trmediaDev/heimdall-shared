@@ -38,4 +38,7 @@ export class AssetPatchRequest {
     @IsBoolean()
     @IsOptional()
     isPremium?: boolean;
+
+    @IsOptional()
+    foreign?: boolean;
 }

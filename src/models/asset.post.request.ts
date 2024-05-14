@@ -35,6 +35,9 @@ export declare class AssetPostRequest {
     @IsString()
     @IsOptional()
     originalFilename?: string;
+
     @IsOptional()
     templateAssetCount?: number;
+    @IsOptional()
+    foreign?: boolean;
 }

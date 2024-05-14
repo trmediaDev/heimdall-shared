@@ -42,6 +42,7 @@ export declare class Asset {
     variants?: Variants;
     embedding?: number[];
     tags?: IAssetTag[];
+    foreign?: boolean;
 }
 export interface IAssetTag {
     id: ObjectId;
