@@ -10,4 +10,5 @@ export declare class AssetPostRequest {
     keywords?: [];
     originalFilename?: string;
     templateAssetCount?: number;
+    foreign?: boolean;
 }
