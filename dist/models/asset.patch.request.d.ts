@@ -9,4 +9,5 @@ export declare class AssetPatchRequest {
     keywords?: [];
     templateAssetCount?: number;
     isPremium?: boolean;
+    foreign?: boolean;
 }
