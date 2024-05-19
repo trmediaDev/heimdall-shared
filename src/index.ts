@@ -14,7 +14,7 @@ export * from './responses/update-response';
 export * from './utils/mongo.utils';
 export * from './utils/asset.helpers';
 export * from './utils/security.utils';
-export * from './utils/string.utils';
+// export * from './utils/string.utils';
 
 export * from './models/task-type';
 export * from './models/task';
