@@ -126,6 +126,9 @@ export class Asset {
     tags?: IAssetTag[];
     stitchable?: string;
     collageLayoutType?: string;
+
+    @IsOptional()
+    foreign?: boolean;
 }
 
 export interface IAssetTag {

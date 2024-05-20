@@ -29,7 +29,7 @@ __exportStar(require("./responses/update-response"), exports);
 __exportStar(require("./utils/mongo.utils"), exports);
 __exportStar(require("./utils/asset.helpers"), exports);
 __exportStar(require("./utils/security.utils"), exports);
-__exportStar(require("./utils/string.utils"), exports);
+// export * from './utils/string.utils';
 __exportStar(require("./models/task-type"), exports);
 __exportStar(require("./models/task"), exports);
 __exportStar(require("./models/workflow-type"), exports);
