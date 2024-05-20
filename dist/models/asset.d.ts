@@ -45,6 +45,7 @@ export declare class Asset {
     tags?: IAssetTag[];
     stitchable?: string;
     collageLayoutType?: string;
+    foreign?: boolean;
 }
 export interface IAssetTag {
     id: ObjectId;
