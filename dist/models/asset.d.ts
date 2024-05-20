@@ -28,6 +28,7 @@ export declare class Asset {
     disabled?: boolean;
     showInPublicSearch?: boolean;
     templateAssetCount?: number;
+    assetCount?: number;
     height?: number;
     width?: number;
     aspectRatio?: number;
@@ -42,6 +43,8 @@ export declare class Asset {
     variants?: Variants;
     embedding?: number[];
     tags?: IAssetTag[];
+    stitchable?: string;
+    collageLayoutType?: string;
 }
 export interface IAssetTag {
     id: ObjectId;

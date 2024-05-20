@@ -99,6 +99,9 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "templateAssetCount", void 0);
 __decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "assetCount", void 0);
+__decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "height", void 0);

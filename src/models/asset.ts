@@ -81,6 +81,8 @@ export class Asset {
 
     @IsOptional()
     templateAssetCount?: number;
+    @IsOptional()
+    assetCount?: number;
     @IsNumber()
     @IsOptional()
     height?: number;
@@ -122,6 +124,8 @@ export class Asset {
     variants?: Variants;
     embedding?: number[];
     tags?: IAssetTag[];
+    stitchable?: string;
+    collageLayoutType?: string;
 }
 
 export interface IAssetTag {
