@@ -8,7 +8,7 @@ var AssetType;
     AssetType["BACKGROUND"] = "background";
     AssetType["DECORATION_ITEM"] = "decorations_item";
     AssetType["FREE_STYLE_COLLAGE"] = "free_style_collage";
-    AssetType["GREED_STYLE_COLLAGE"] = "greed_style_collage";
+    AssetType["GRID_STYLE_COLLAGE"] = "grid_style_collage";
     AssetType["SHAPE"] = "shape";
     AssetType["PHOTO"] = "photo";
     AssetType["TEMP"] = "temp";
