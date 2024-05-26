@@ -47,4 +47,7 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)()
 ], AssetPatchRequest.prototype, "isPremium", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)()
+], AssetPatchRequest.prototype, "foreign", void 0);
 exports.AssetPatchRequest = AssetPatchRequest;

@@ -99,6 +99,9 @@ __decorate([
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "templateAssetCount", void 0);
 __decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "assetCount", void 0);
+__decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)()
 ], Asset.prototype, "height", void 0);
@@ -141,6 +144,9 @@ __decorate([
 __decorate([
     (0, class_transformer_1.Type)(() => asset_variants_1.Variants)
 ], Asset.prototype, "variants", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)()
+], Asset.prototype, "foreign", void 0);
 exports.Asset = Asset;
 class AssetDBObject extends Asset {
 }

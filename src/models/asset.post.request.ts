@@ -35,6 +35,15 @@ export declare class AssetPostRequest {
     @IsString()
     @IsOptional()
     originalFilename?: string;
+
     @IsOptional()
     templateAssetCount?: number;
+    @IsOptional()
+    assetCount?: number;
+    @IsOptional()
+    foreign?: boolean;
+    @IsOptional()
+    stitchable?: boolean;
+    @IsOptional()
+    collageLayoutType?: string;
 }
