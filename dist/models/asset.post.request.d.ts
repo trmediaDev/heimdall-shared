@@ -10,5 +10,8 @@ export declare class AssetPostRequest {
     keywords?: [];
     originalFilename?: string;
     templateAssetCount?: number;
+    assetCount?: number;
     foreign?: boolean;
+    stitchable?: boolean;
+    collageLayoutType?: string;
 }
