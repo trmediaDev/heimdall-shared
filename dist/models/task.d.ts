@@ -1,6 +1,6 @@
 import { ObjectId } from 'mongodb';
 import { TaskType } from './task-type';
-export declare type TaskData = any;
+export type TaskData = any;
 export declare enum TaskState {
     CREATED = "CREATED",
     STARTED = "STARTED",
