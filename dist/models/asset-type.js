@@ -13,5 +13,4 @@ var AssetType;
     AssetType["PHOTO"] = "photo";
     AssetType["TEMP"] = "temp";
     AssetType["FONT_PRESET"] = "font_preset";
-    AssetType["PHOTO_FRAME"] = "photo_frame";
 })(AssetType = exports.AssetType || (exports.AssetType = {}));
